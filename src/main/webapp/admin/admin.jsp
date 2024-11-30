@@ -31,6 +31,7 @@
 </head>
 <body>
 <%
+    //admin page
     User currentUser = (User) request.getSession().getAttribute("user");
 
     if (currentUser != null && currentUser.getRole().equals(Role.USER)) {
@@ -41,6 +42,8 @@
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
+
+
         <div class="col-3 sidebar">
             <h4>Bo'limlar</h4>
             <form action="/admin/admin.jsp" method="post">
